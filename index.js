@@ -57,13 +57,13 @@ const askQuestions = () =>{
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.appendFile(`${fileName}.md`, data, (err) => 
-    err ? console.log('Could not create the README file') : console.log(`${fileName} README has been created!`))
+    err ? console.log('Could not create the README file') : console.log(`${fileName} README file has been created!`))
 }
 
 // TODO: Create a function to initialize app
 function init() {
     askQuestions()
-    .then ((answers) => writeToFile(answers.fileName, "hello"))
+    .then ((answers) => writeToFile(answers.fileName, generateMarkdown(answers)))
 }
 
 // Function call to initialize app
