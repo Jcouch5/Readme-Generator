@@ -54,10 +54,11 @@ function generateMarkdown(data) {
   # ${data.fileName}
 
   ## ${data.license} ${renderLicenseBadge(data.license)}
-  ${renderLicenseLink(data.license)}
+  [License Link](${renderLicenseLink(data.license)})
 
   ## Table of contents
   </br>
+
   [Description](#description)
   </br>
   [Install](#install)
