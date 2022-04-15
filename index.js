@@ -40,7 +40,21 @@ const askQuestions = () =>{
         type: 'list',
         message: "What licenses (if any) does this project use?",
         name: 'license',
-        choices: ["none"]
+        choices: ["GNU Affero General Public License v3.0", 
+        'Apache License 2.0', 
+        'BSD 2-Clause',
+        'BSD 3-Clause',
+        "Boost Software License 1.0",
+        "Creative Commons Zero v1.0 Universal",
+        "Eclipse Public License 2.0",
+        "GNU General Public License v2.0",
+        "GNU General Public License v3.0",
+        "GNU Lesser General Public License v2.1",
+        "https://api.github.com/licenses/mit",
+        "Mozilla Public License 2.0",
+        "The Unlicense",
+        'none'
+     ]
     },
     {
         type: 'input',
@@ -54,6 +68,7 @@ const askQuestions = () =>{
     }
 ]);
 }
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.appendFile(`${fileName}.md`, data, (err) => 
@@ -68,3 +83,4 @@ function init() {
 
 // Function call to initialize app
 init();
+
